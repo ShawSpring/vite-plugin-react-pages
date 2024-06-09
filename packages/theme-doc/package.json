@@ -14,7 +14,8 @@
   },
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "README.md"
   ],
   "keywords": [
     "vite-pages",
