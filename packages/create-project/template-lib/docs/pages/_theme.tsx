@@ -37,8 +37,11 @@ export default createTheme({
           element: 'ligth theme',
         },
         {
-          label: 'Vite Pages2',
-          href: 'https://github.com/vitejs/vite-plugin-react-pages',
+          key: 'dark',
+          onclick: ({ key, domEvent }) => {
+            alert(key)
+          },
+          element: 'dark theme',
         },
       ],
     },
