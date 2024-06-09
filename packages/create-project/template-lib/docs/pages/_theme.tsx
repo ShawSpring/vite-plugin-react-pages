@@ -25,6 +25,23 @@ export default createTheme({
       label: 'Vite Pages',
       href: 'https://github.com/vitejs/vite-plugin-react-pages',
     },
+    {
+      subMenu: 'themes',
+      icon: '🎨',
+      children: [
+        {
+          key: 'light',
+          onclick: ({ key, domEvent }) => {
+            alert(key)
+          },
+          element: 'ligth theme',
+        },
+        {
+          label: 'Vite Pages2',
+          href: 'https://github.com/vitejs/vite-plugin-react-pages',
+        },
+      ],
+    },
   ],
   sideNavs: (ctx) => {
     return defaultSideNavs(ctx, {

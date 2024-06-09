@@ -24,7 +24,7 @@ interface Props {}
 const AppLayout: React.FC<React.PropsWithChildren<Props>> = ({ children }) => {
   const { sideNavs } = useContext(themeConfigCtx)
   const themeCtxValue = useThemeCtx()
-
+  // console.log('themeCtxValue', themeConfigCtx)
   const [isSlideSiderOpen, setIsSlideSiderOpen] = useState(false)
 
   const sideNavsData = useMemo(() => {

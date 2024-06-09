@@ -162,6 +162,7 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = (props) => {
               mode="horizontal"
               selectedKeys={activeKeys}
               disabledOverflow
+              //* 在这里渲染菜单项
               items={renderMenu(resolvedTopNavs, true)}
             />
           </div>

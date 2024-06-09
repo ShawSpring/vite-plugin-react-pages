@@ -1,34 +1,34 @@
 {
-  "name": "vite-pages-theme-doc",
-  "version": "5.0.0",
+  "name": "@shawspring/vite-pages-theme-doc",
+  "version": "0.0.8",
   "description": "A document theme for vite-plugin-react-pages.",
   "type": "module",
+  "private": false,
   "module": "dist/index.js",
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
       "types": "./lib/index.d.ts",
       "import": "./dist/index.js"
-    },
-    "./src": "./src",
-    "./src/*": "./src/*"
+    }
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "keywords": [
-    "vite",
-    "react",
     "vite-pages",
     "react-pages",
-    "vite-plugin-react-pages"
+    "vite-plugin-react-pages",
+    "vite",
+    "react"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitejs/vite-plugin-react-pages.git"
+    "url": "git+https://github.com/ShawSpring/vite-plugin-react-pages.git"
   },
-  "bugs": {
-    "url": "https://github.com/vitejs/vite-plugin-react-pages/issues"
-  },
-  "homepage": "https://github.com/vitejs/vite-plugin-react-pages",
+  "homepage": "https://github.com/ShawSpring/vite-plugin-react-pages.git",
   "scripts": {
     "clean": "rimraf ./dist ./lib ./dist-vite-plugin",
     "build": "npm run clean && concurrently \"npm:build-*\"",

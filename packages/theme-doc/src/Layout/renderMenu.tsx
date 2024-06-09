@@ -5,6 +5,14 @@ import type { PathPattern } from 'react-router-dom'
 import { CaretDownOutlined } from '@ant-design/icons'
 
 type ItemTypes = NonNullable<MenuProps['items']>
+//* type of  onClick
+export type TitleClick = ({
+  key,
+  domEvent,
+}: {
+  key: string
+  domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>
+}) => void
 
 export const renderMenuHelper = (isTopNav: boolean) =>
   function renderMenu(
@@ -90,7 +98,14 @@ export const renderMenuHelper = (isTopNav: boolean) =>
           children: renderMenu(item.children),
         }
       }
-
+      //! customize menu item: clickable, label can be JSX.element
+      if ('element' in item) {
+        return {
+          key: item.key,
+          label: item.element,
+          onClick: item.onclick,
+        }
+      }
       throw new Error(`invalid menu config`)
     })
   }
@@ -142,6 +157,11 @@ export type MenuConfig =
        */
       readonly group: string
       readonly children: ReadonlyArray<MenuConfig>
+    }
+  | {
+      readonly key: string
+      readonly element: React.JSX.Element | string
+      onclick?: TitleClick
     }
 
 function ExternalLinkIcon() {

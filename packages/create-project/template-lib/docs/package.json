@@ -1,5 +1,8 @@
 {
   "name": "docs",
   "private": "true",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "vite-pages-theme-doc": "workspace:*"
+  }
 }

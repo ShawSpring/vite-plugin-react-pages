@@ -4,10 +4,10 @@
     "baseUrl": ".",
     "jsx": "react",
     "moduleResolution": "Node",
-    "lib": ["ES2015"],
+    "lib": ["ES2015", "dom"],
     "paths": {
-      "my-lib": ["./src"]
+      "my-lib": ["./src"],
     },
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+  },
 }
