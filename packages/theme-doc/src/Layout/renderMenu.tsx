@@ -5,7 +5,7 @@ import type { PathPattern } from 'react-router-dom'
 import { CaretDownOutlined } from '@ant-design/icons'
 
 type ItemTypes = NonNullable<MenuProps['items']>
-//* type of  onClick
+//* add a type
 export type TitleClick = ({
   key,
   domEvent,

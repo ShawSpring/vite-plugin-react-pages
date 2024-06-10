@@ -1,18 +1,7 @@
 
 # clickable theme extends vite-pages-theme-doc
 
-
-> simply customize **official theme**, extends a 
-MenuConfig type 
-
-
-refence:
-> [where changed in source code](https://github.com/ShawSpring/vite-plugin-react-pages/blob/main/packages/theme-doc/src/Layout/renderMenu.tsx)
-
-
-> [official-theme doc](https://vitejs.github.io/vite-plugin-react-pages/official-theme).  
-
-> [vite-plugin-react-pages](https://vitejs.github.io/vite-plugin-react-pages) (vite-pages) 
+a custom theme of [vite-plugin-react-pages](https://vitejs.github.io/vite-plugin-react-pages) (vite-pages) ,simply extends `topNavs` type in [official-theme](https://vitejs.github.io/vite-plugin-react-pages/official-theme).  
 
 
 
@@ -23,7 +12,7 @@ customize menu item, with two features
 3. compitable with official theme `vite-pages-theme-doc@5.0.0`
 
 
-My component library have 30+ themes, so I need the menu act as a theme selector.
+My component library have 30+ themes, so I can make the top Nav menu act as a theme selector.
 ![alt text](image.png)
 
 
@@ -62,8 +51,8 @@ import { createTheme } from '@shawspring/vite-pages-theme-doc'
 
 
 ## type definition
-```
-//packages/theme-doc/src/Layout/renderMenu.tsx
+
+```ts
 type MenuConfig =
 ... // original type
   | {
@@ -72,4 +61,9 @@ type MenuConfig =
       onclick?: TitleClick
     }
 ```
+
+
+[source code](https://github.com/shawspring/vite-plugin-react-pages/blob/main/packages/theme-doc/src/Layout/renderMenu.tsx)
+
+
 

@@ -1,6 +1,6 @@
 {
   "name": "@shawspring/vite-pages-theme-doc",
-  "version": "0.0.91",
+  "version": "0.0.92",
   "description": "A document theme for vite-plugin-react-pages.",
   "type": "module",
   "publishConfig": {
@@ -41,7 +41,8 @@
     "dev": "npm run clean && concurrently \"npm:dev-*\"",
     "dev-dts": "tsc -p src --watch",
     "dev-rollup": "rollup -wc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
   },
   "// antd comment": "current latest antd (antd@5.13.2 + @ant-design/icons@5.2.6) have bug on node esm. wait this issue to be resolve before upgrade antd https://github.com/ant-design/ant-design-icons/issues/605",
   "devDependencies": {
