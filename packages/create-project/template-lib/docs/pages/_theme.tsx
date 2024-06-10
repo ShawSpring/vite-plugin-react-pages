@@ -34,14 +34,26 @@ export default createTheme({
           onclick: ({ key, domEvent }) => {
             alert(key)
           },
-          element: 'ligth theme',
+          element: (
+            <div
+              style={{ border: '1px solid red', width: '100%', height: '100%' }}
+            >
+              light theme
+            </div>
+          ),
         },
         {
           key: 'dark',
           onclick: ({ key, domEvent }) => {
             alert(key)
           },
-          element: 'dark theme',
+          element: (
+            <div
+              style={{ border: '1px solid red', width: '100%', height: '100%' }}
+            >
+              dark theme
+            </div>
+          ),
         },
       ],
     },

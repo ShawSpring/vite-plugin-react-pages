@@ -1,9 +1,12 @@
 {
   "name": "@shawspring/vite-pages-theme-doc",
-  "version": "0.0.8",
+  "version": "0.0.91",
   "description": "A document theme for vite-plugin-react-pages.",
   "type": "module",
-  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "module": "dist/index.js",
   "types": "lib/index.d.ts",
   "exports": {
@@ -29,7 +32,7 @@
     "type": "git",
     "url": "git+https://github.com/ShawSpring/vite-plugin-react-pages.git"
   },
-  "homepage": "https://github.com/ShawSpring/vite-plugin-react-pages.git",
+  "homepage": "https://www.npmjs.com/package/@shawspring/vite-pages-theme-doc",
   "scripts": {
     "clean": "rimraf ./dist ./lib ./dist-vite-plugin",
     "build": "npm run clean && concurrently \"npm:build-*\"",

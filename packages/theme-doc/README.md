@@ -1,13 +1,31 @@
-# A fork of vite-plugin-react-pages
-just for **customize official** theme, focus on workspace `packages/theme-doc` 
-[Checkout the official-theme](https://vitejs.github.io/vite-plugin-react-pages/official-theme).
-[vite-plugin-react-pages](https://vitejs.github.io/vite-plugin-react-pages) (vite-pages) is a React app framework powered by [vite](https://github.com/vitejs/vite). It is very suitable for:
+
+# clickable theme extends vite-pages-theme-doc
 
 
-## my custom theme
-### feature
-customize menu item click events.
+> simply customize **official theme**, extends a 
+MenuConfig type 
+
+
+refence:
+> [where changed in source code](https://github.com/ShawSpring/vite-plugin-react-pages/blob/main/packages/theme-doc/src/Layout/renderMenu.tsx)
+
+
+> [official-theme doc](https://vitejs.github.io/vite-plugin-react-pages/official-theme).  
+
+> [vite-plugin-react-pages](https://vitejs.github.io/vite-plugin-react-pages) (vite-pages) 
+
+
+
+## features 
+customize menu item, with two features
+1. click events
+2. set JSX Element instead of string.
+3. compitable with official theme `vite-pages-theme-doc@5.0.0`
+
+
 My component library have 30+ themes, so I need the menu act as a theme selector.
+![alt text](image.png)
+
 
 ## usage
 > be careful, '@shawspring/vite-pages-theme-doc' replace 'vite-plugin-react-pages'
@@ -26,9 +44,9 @@ import { createTheme } from '@shawspring/vite-pages-theme-doc'
         {
           key: 'light',
           onclick: ({ key, domEvent }) => {
-            setTheme(key) // fake code
+            setTheme(key) //   😕
           },
-          element: 'ligth theme',
+          element: <jsx-element/>, // 😽
         },
         {
           key: 'dark',
@@ -43,21 +61,15 @@ import { createTheme } from '@shawspring/vite-pages-theme-doc'
 ```
 
 
-simply extend the MenuConfig, make menu item clickable, not just navigate to path or external link
+## type definition
 ```
 //packages/theme-doc/src/Layout/renderMenu.tsx
 type MenuConfig =
-...
+... // original type
   | {
       readonly key: string
       readonly element: React.JSX.Element | string
       onclick?: TitleClick
     }
 ```
-
-
-dev preview
-
-workspace `packages/create-project/template-lib` use for  preview
-> import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc/src' not work, why?
 
